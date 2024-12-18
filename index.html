@@ -23,7 +23,7 @@
             <div class="flex justify-between items-center py-6">
                 <!-- Blog Button -->
                 <div>
-                    <a href="#"
+                    <a href="blog.html"
                         class="text-xl font-semibold text-black py-3 px-8 bg-[#B4F461] rounded-xl hover:bg-[#A3E450]">
                         Blog
                     </a>
@@ -47,7 +47,7 @@
                         <img class="w-8 h-8" src="assets/coin.png" alt="Balance Icon">
                     </div>
                     <a href="#" class="text-[#111111B2] text-xl font-semibold hover:text-gray-700">
-                        <span>5500</span> BDT
+                        <span id="total-balance">5500</span> BDT
                     </a>
                 </div>
             </div>
@@ -73,29 +73,33 @@
                         <div
                             class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[25%] w-[35%]">
                             <img src="assets/coin.png" alt="Donation Icon" class="w-8 h-8">
-                            <p class="text-lg font-semibold"><span>600</span> BDT</p>
+                            <p class="text-lg font-semibold"><span id="donateBalance">600</span> BDT</p>
                         </div>
 
-                        <h1 class="text-2xl font-bold text-black text-start">Donate for Flood Relief in Feni,Bangladesh
+                        <h1 class="text-2xl font-bold text-black text-start">Donate for Flood at Noakhali, Bangladesh
                         </h1>
                         <p class="py-6 text-start">
-                            The recent floods in Feni have devastated local communities, leading to severe disruption
-                            and loss. Your generous
-                            donation will help provide immediate aid, including food, clean water, and medical supplies,
-                            to those affected by this
-                            calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of
-                            this disaster. Every
-                            contribution counts towards making a real difference. Please consider donating today to
-                            assist those in urgent need.
+                            The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                            donation will help provide
+                            essential supplies and to those affected by this disaster. Every contribution, big or small,
+                            makes difference. Please
+                            join us in supporting the relief efforts and making a positive impact on the lives of those
+                            in need.
                         </p>
                         <div class="w-full">
-                            <input type="text" placeholder="Type here" class="input input-ghost w-full mb-4" />
-                            <button class="btn btn-primary w-full hover:bg-blue-700">Get Started</button>
+                            <input id="input-donate-Noakhali" type="text" placeholder="Write Donation Amount"
+                                class="input input-ghost w-full mb-4" />
+                            <button id="btn-donate-Noakhali" class="btn btn-primary w-full hover:bg-blue-700">
+                                Donate Now
+
+
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Donate Section 2 -->
         <section class="mt-8">
             <div class="hero bg-white border rounded-2xl shadow-lg">
@@ -105,7 +109,7 @@
                         <div
                             class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[25%] w-[35%]">
                             <img src="assets/coin.png" alt="Donation Icon" class="w-8 h-8">
-                            <p class="text-lg font-semibold"><span>600</span> BDT</p>
+                            <p class="text-lg font-semibold"><span id="donateBalance">600</span> BDT</p>
                         </div>
 
                         <h1 class="text-2xl font-bold text-black text-start">Donate for Flood Relief in Feni,Bangladesh
@@ -121,13 +125,14 @@
                             assist those in urgent need.
                         </p>
                         <div class="w-full">
-                            <input type="text" placeholder="Type here" class="input input-ghost w-full mb-4" />
-                            <button class="btn btn-primary w-full hover:bg-blue-700">Get Started</button>
+                            <input id="input-donate-feni" type="text" placeholder="Write Donation Amount" class="input input-ghost w-full mb-4" />
+                            <button id="btn-donate-feni" class="btn btn-primary w-full hover:bg-blue-700">Get Started</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Donate Section 3 -->
         <section class="mt-8">
             <div class="hero bg-white border rounded-2xl shadow-lg">
@@ -160,6 +165,21 @@
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box text-center">
+                <h3 class="text-lg font-bold">Congrates!</h3>
+                <img class="mx-auto" src="assets/coin.png" alt="">
+                <p class="py-4">You Have Donated Humankind</p>
+                <h3 class="text-lg font-bold">Successfully</h3>
+                <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                        <button class="btn">Close Confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <!-- Footer Section -->
@@ -169,6 +189,7 @@
 
     <!-- JavaScript File -->
     <script src="javascript/donate.js"></script>
+    <script src="javascript/utilities.js"></script>
 </body>
 
 </html>
