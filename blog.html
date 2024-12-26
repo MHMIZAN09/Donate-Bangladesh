@@ -17,47 +17,83 @@
 
     <!-- Font awesome  -->
     <script src="https://kit.fontawesome.com/876a0436e7.js" crossorigin="anonymous"></script>
+
+    <style>
+        .lexendFont {
+            font-family: "Lexend", serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="lexendFont">
     <!-- Header Section -->
     <header class="fixed top-0 left-0 w-full bg-[#F9F7F3] shadow-md z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-6">
-                <!-- Blog Button -->
-                <div>
-                    <a href="blog.html" class="text-xl font-semibold text-black py-3 px-8 bg-[#B4F461] rounded-xl ">
-                        Blog
-                    </a>
-                </div>
+                <div class="navbar">
+                    <!-- Navbar Start -->
+                    <div class="navbar-start hidden lg:flex">
+                        <!-- Blog Button -->
+                        <div>
+                            <a href="blog.html" class="text-xl font-bold text-black py-3 px-8 bg-[#B4F461] rounded-xl ">
+                                Blog
+                            </a>
+                        </div>
+                    </div>
 
-                <!-- Logo and Text -->
-                <div class="flex justify-center items-center gap-3">
-                    <div>
-                        <img class="w-11 h-11" src="assets/logo.png" alt="Donate Bangladesh Logo">
+                    <!-- Navbar Center -->
+                    <div class="navbar-center">
+                        <div class="menu menu-horizontal px-1">
+                            <!-- Logo and Text -->
+                            <div class="flex justify-center items-center gap-3">
+                                <div>
+                                    <img class="w-5 h-5 lg:w-11 lg:h-11 " src="assets/logo.png"
+                                        alt="Donate Bangladesh Logo">
+                                </div>
+                                <div>
+                                    <a href="#" class="text-sm md:text-base lg:text-xl font-bold text-black ">
+                                        Donate Bangladesh
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#" class="text-xl font-semibold text-black hover:text-gray-700">
-                            Donate Bangladesh
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Balance Section -->
-                <div class="flex justify-center items-center gap-2">
-                    <div>
-                        <img class="w-8 h-8" src="assets/coin.png" alt="Balance Icon">
+                    <!-- Navbar End -->
+                    <div class="navbar-end">
+                        <!-- Balance Section -->
+                        <div class="flex justify-center items-center gap-2">
+                            <div>
+                                <img class="w-4 h-4 lg:w-8 lg:h-8" src="assets/coin.png" alt="Balance Icon">
+                            </div>
+                            <a href="#" class="text-black text-sm md:text-base lg:text-xl font-bold">
+                                <span id="total-balance">5500</span> BDT
+                            </a>
+                        </div>
+
                     </div>
-                    <a href="#" class="text-[#111111B2] text-xl font-semibold hover:text-gray-700">
-                        <span id="total-balance">5500</span> BDT
-                    </a>
+
+                    <!-- Dropdown for Mobile View -->
+                    <div class="dropdown lg:hidden ">
+                        <div tabindex="0" role="button" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 w-52 bg-base-100 rounded-box shadow z-[1]">
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Section  -->
-    <main class="container mx-auto mt-28 px-4">
+    <main class="container mx-auto mt-36 mb-10 px-4">
         <h1 class="text-xl lg:text-4xl font-bold text-black">Important FAQ <i
                 class="fa-solid fa-question text-xl lg:text-4xl"></i>
         </h1>
@@ -65,7 +101,8 @@
             <div class="join join-vertical w-full">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" checked="checked" />
-                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-title text-xl font-bold text-black">What is the Document Object Model (DOM)?
+                    </div>
                     <div class="collapse-content">
                         <p>The Document Object Model (DOM) represents the structure of an HTML document in the form of a
                             tree,
@@ -75,10 +112,11 @@
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-xl font-medium">How do you select on element from the DOM?</div>
+                    <div class="collapse-title text-xl font-bold text-black">How do you select on element from the DOM?
+                    </div>
                     <div class="collapse-content">
                         <p>To select an element from the DOM</p>
-                        <ul class="list-decimal p-2">
+                        <ul class="list-decimal p-4">
                             <li>getElementById</li>
                             <li>querySelector</li>
                             <li>getElementsByClassName</li>
@@ -89,23 +127,29 @@
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-title text-xl font-bold text-black">What is event delegation in the context of
+                        the DOM,
+                        and why is it useful?</div>
                     <div class="collapse-content">
                         <p>Event delegation is a technique in the DOM where a single event listener is added to a parent
-                        element to handle events
-                        for its child elements. Instead of attaching separate event listeners to each child, the parent
-                        element listens for
-                        events that bubble up from the children.</p>
-                    <p>This works because of event bubbling, where an event triggered on a child element propagates up
-                        to its parent, allowing
-                        the parent to "catch" the event.</p>
+                            element to handle events
+                            for its child elements. Instead of attaching separate event listeners to each child, the
+                            parent
+                            element listens for
+                            events that bubble up from the children.</p>
+                        <p>This works because of event bubbling, where an event triggered on a child element propagates
+                            up
+                            to its parent, allowing
+                            the parent to "catch" the event.</p>
                     </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                     <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and style using the DOM?</div>
+                    <div class="collapse-title text-xl font-bold text-black">How do you manipulate an element's
+                        attributes and
+                        style using the DOM?</div>
                     <div class="collapse-content">
-                        <ul class="list-decimal p-2">
+                        <ul class="list-decimal p-4">
                             <li>setAttribute</li>
                             <li>getAttribute</li>
                             <li>removeAttribute</li>

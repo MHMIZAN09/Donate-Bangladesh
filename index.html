@@ -13,58 +13,94 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .lexendFont {
+            font-family: "Lexend", serif;
+        }
+    </style>
 </head>
 
-<body class="">
+<body class="lexendFont">
     <!-- Header Section -->
     <header class="fixed top-0 left-0 w-full bg-[#F9F7F3] shadow-md z-50">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-6">
-                <!-- Blog Button -->
-                <div>
-                    <a href="blog.html" class="text-xl font-semibold text-black py-3 px-8 bg-[#B4F461] rounded-xl ">
-                        Blog
-                    </a>
-                </div>
+                <div class="navbar">
+                    <!-- Navbar Start -->
+                    <div class="navbar-start hidden lg:flex">
+                        <!-- Blog Button -->
+                        <div>
+                            <a href="blog.html" class="text-xl font-bold text-black py-3 px-8 bg-[#B4F461] rounded-xl ">
+                                Blog
+                            </a>
+                        </div>
+                    </div>
 
-                <!-- Logo and Text -->
-                <div class="flex justify-center items-center gap-3">
-                    <div>
-                        <img class="w-11 h-11" src="assets/logo.png" alt="Donate Bangladesh Logo">
+                    <!-- Navbar Center -->
+                    <div class="navbar-center">
+                        <div class="menu menu-horizontal px-1">
+                            <!-- Logo and Text -->
+                            <div class="flex justify-center items-center gap-3">
+                                <div>
+                                    <img class="w-5 h-5 lg:w-11 lg:h-11 " src="assets/logo.png"
+                                        alt="Donate Bangladesh Logo">
+                                </div>
+                                <div>
+                                    <a href="#" class="text-sm md:text-base lg:text-xl font-bold text-black ">
+                                        Donate Bangladesh
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="#" class="text-xl font-semibold text-black hover:text-gray-700">
-                            Donate Bangladesh
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Balance Section -->
-                <div class="flex justify-center items-center gap-2">
-                    <div>
-                        <img class="w-8 h-8" src="assets/coin.png" alt="Balance Icon">
+                    <!-- Navbar End -->
+                    <div class="navbar-end">
+                        <!-- Balance Section -->
+                        <div class="flex justify-center items-center gap-2">
+                            <div>
+                                <img class="w-4 h-4 lg:w-8 lg:h-8" src="assets/coin.png" alt="Balance Icon">
+                            </div>
+                            <a href="#" class="text-black text-sm md:text-base lg:text-xl font-bold">
+                                <span id="total-balance">5500</span> BDT
+                            </a>
+                        </div>
+
                     </div>
-                    <a href="#" class="text-[#111111B2] text-xl font-semibold hover:text-gray-700">
-                        <span id="total-balance">5500</span> BDT
-                    </a>
+
+                    <!-- Dropdown for Mobile View -->
+                    <div class="dropdown lg:hidden ">
+                        <div tabindex="0" role="button" class="btn btn-ghost">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 w-52 bg-base-100 rounded-box shadow z-[1]">
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Section -->
-    <main class="container mx-auto mt-28 px-4">
+    <main class="container mx-auto mt-36 mb-10 px-4">
         <!-- toggle button  -->
         <section>
             <div class="flex justify-center items-center gap-9">
                 <a id="btn-donation"
-                    class="text-xl font-semibold text-black py-3 px-8 bg-[#B4F461] rounded-xl cursor-pointer">Donation</a>
+                    class="text-xl font-semibold text-black py-3 px-8 bg-[#B4F461] rounded-xl cursor-pointer active-btn">Donation</a>
                 <a id="btn-history"
                     class="text-xl font-semibold text-black py-3 px-8 border rounded-xl cursor-pointer">History</a>
-
             </div>
         </section>
+
         <section id="donation-section">
             <!-- Donate Section 1 -->
             <div class="mt-8">
@@ -73,12 +109,13 @@
                         <img src="assets/noakhali.png" alt="Noakhali Image" class=" rounded-lg" />
                         <div class="lg:ml-10 text-center lg:text-left">
                             <div
-                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[25%] w-[35%]">
+                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[30%] w-[5%]">
                                 <img src="assets/coin.png" alt="Donation Icon" class="w-8 h-8">
                                 <p class="text-lg font-semibold"><span id="donateBalance">0</span> BDT</p>
                             </div>
 
-                            <h1 id="title" class="text-2xl font-bold text-black text-start">Donate for Flood at Noakhali,
+                            <h1 id="title" class="text-2xl font-bold text-black text-start">Donate for Flood at
+                                Noakhali,
                                 Bangladesh
                             </h1>
                             <p class="py-6 text-start">
@@ -111,7 +148,7 @@
                         <img src="assets/feni.png" alt="Noakhali Image" class=" rounded-lg" />
                         <div class="lg:ml-10 text-center lg:text-left">
                             <div
-                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[25%] w-[35%]">
+                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[30%] w-[50%]">
                                 <img src="assets/coin.png" alt="Donation Icon" class="w-8 h-8">
                                 <p class="text-lg font-semibold"><span id="donateBalanceFeni">600</span> BDT</p>
                             </div>
@@ -150,12 +187,13 @@
                         <img src="assets/quota-protest.png" alt="Noakhali Image" class=" rounded-lg" />
                         <div class="lg:ml-10 text-center lg:text-left">
                             <div
-                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[25%] w-[35%]">
+                                class="flex justify-start items-center gap-2 border rounded-2xl py-3 px-4 mb-3 lg:w-[30%] w-[50%]">
                                 <img src="assets/coin.png" alt="Donation Icon" class="w-8 h-8">
                                 <p class="text-lg font-semibold"><span id="donateBalanceQuota">2400</span> BDT</p>
                             </div>
 
-                            <h1 id="title3" class="text-2xl font-bold text-black text-start">Aid for Injured in the Quota Movement
+                            <h1 id="title3" class="text-2xl font-bold text-black text-start">Aid for Injured in the
+                                Quota Movement
                             </h1>
                             <p class="py-6 text-start">
                                 The recent Quota movement has resulted in numerous injuries and significant hardship for
@@ -199,8 +237,9 @@
 
         <!-- History Section -->
         <section id="history-section" class="hidden  container mx-auto">
-            <p id="default-history-message" class="mt-5 text-4xl font-bold text-black text-center">On Donate History !</p>
-            
+            <p id="default-history-message" class="mt-5 text-4xl font-bold text-black text-center">No Donate History
+                Here!</p>
+
         </section>
 
 
